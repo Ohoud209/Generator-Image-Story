@@ -4,8 +4,9 @@ from streamlit.elements.spinner import spinner
 from PIL import Image
 from dotenv import load_dotenv
 load_dotenv()
-import os
-openai.api_key = st.secrets["OPENAI_KEY"]
+import toml
+config = toml.load('secrets.toml')
+openai.api_key = config['api']['OPENAI_KEY']
 def get_response(user_prompt):
     
     

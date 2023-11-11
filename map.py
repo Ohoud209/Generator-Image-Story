@@ -3,8 +3,9 @@ import streamlit as st
 import openai
 from dotenv import load_dotenv
 load_dotenv()
-import os
-openai.api_key = st.secrets["OPENAI_KEY"]
+import toml
+config = toml.load('secrets.toml')
+openai.api_key = config['api']['OPENAI_KEY']
 
 def get_response(text):
     prompt = f"""
