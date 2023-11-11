@@ -5,9 +5,9 @@ from PIL import Image
 from dotenv import load_dotenv
 from streamlit.runtime.secrets import Secrets
 load_dotenv()
-import toml
-secrets = toml.load('/Users/mmssii/P/.streamlit/secrets.toml')
-openai.api_key = secrets['api']['OPENAI_KEY']
+# import toml
+# secrets = toml.load('/Users/mmssii/P/.streamlit/secrets.toml')
+openai.api_key = st.secrets['OPENAI_KEY']
 def get_response(user_prompt):
     
     
