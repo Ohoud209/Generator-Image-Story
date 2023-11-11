@@ -5,7 +5,7 @@ import generat
 import map
 import contact
 st.set_page_config(
-        page_title="Caption Generator",
+        page_title="Generator",
 )
 
 
