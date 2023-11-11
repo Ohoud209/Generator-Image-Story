@@ -4,8 +4,8 @@ import openai
 from dotenv import load_dotenv
 load_dotenv()
 import toml
-config = toml.load('secrets.toml')
-openai.api_key = config['api']['OPENAI_KEY']
+Secrets = toml.load('secrets.toml')
+openai.api_key = Secrets['api']['OPENAI_KEY']
 
 def get_response(text):
     prompt = f"""
