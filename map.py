@@ -4,7 +4,7 @@ import openai
 from dotenv import load_dotenv
 load_dotenv()
 import os
-openai.api_key = os.getenv("OPENAI_KEY")
+openai.api_key = st.secrets["OPENAI_KEY"]
 
 def get_response(text):
     prompt = f"""
